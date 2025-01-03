@@ -1,0 +1,43 @@
+Title: New Joiner Documentation and Access Setup for Stratos
+
+Description:
+As a new team member, the objective is to gain access to Stratos, review the existing documentation, and create a clear and concise Confluence page covering the fundamental aspects of Stratos. This task ensures foundational knowledge and workflows are available and easily understandable for current and future team members.
+
+Tasks:
+
+Access Setup:
+
+Work on obtaining access to Stratos, including namespaces and necessary permissions.
+Document the process and note any challenges or blockers encountered.
+Documentation Review:
+
+Review current documentation related to Stratos.
+Identify gaps or areas needing clarification or updates.
+Confluence Page Creation:
+
+Create a Confluence page for Stratos 101, including:
+Overview of Stratos and its purpose.
+Architecture, design, and environment details.
+Basic foundations required for working within Stratos.
+Steps to set up access and navigate the platform.
+Ensure the documentation is structured and easy to follow.
+Feedback and Approval:
+
+Share the documentation with the team for review.
+Incorporate feedback provided by team members and finalize the page.
+Acceptance Criteria:
+
+The documentation is clear, concise, and comprehensive for understanding the basic foundations of Stratos.
+The documentation has been reviewed and approved by [Reviewer Name] and at least one additional team member.
+Both reviewers agree that the documentation is satisfactory, and the task can be marked as complete.
+Start Date: [Insert Today’s Date]
+End Date: [Next Wednesday’s Date]
+
+Priority: Medium
+
+Assignee: [Your Name]
+
+Notes:
+
+Ensure progress updates are shared in the team chat for visibility.
+Mention in the ticket that this story focuses on new joiner onboarding and foundational Stratos documentation.
