@@ -1,86 +1,120 @@
-Below is a **revised, Confluence-style** document focused on giving **new joiners** a solid overview of Stratos—what it is, why it exists, and how to get started. It **removes references** to any “internal developer platform” or “cloud platform” terminology while still covering the essentials. Section 5 now **briefly introduces Platform 3.0**, as requested.
+Below is an **updated Confluence-style documentation** that integrates the **missing points** about **opinionated golden paths**, **supported tasks** (BigQuery, web apps, PostgreSQL), and **the key challenges** Stratos addresses. It is designed as a **comprehensive yet concise** guide for **new joiners** wanting a solid overview of Stratos—where it came from, what it does, and why it’s important.
 
 ---
 
 # **Stratos Onboarding Guide**
 
 ## **1. Introduction**
-Welcome to **Stratos**, an initiative from our Platform Engineering teams aimed at making software development and deployment simpler and faster. Over the past few years, we’ve significantly reduced environment setup times—from several weeks to just a day or less—by leveraging automation and standardized processes.  
 
-Although you may hear different product names or tools, **Stratos** remains at the core of how we streamline provisioning, manage resources, and improve developer experience across the organization.
+### **1.1 From GCP CNE to Stratos**  
+Previously, teams leveraged **GCP CNE (Cloud Native Engineering)** to deploy applications on Google Cloud. While this enabled some modernization, it also highlighted core pain points:
+
+- **Multiple Tools & Interfaces**: Developers juggled numerous dashboards and CLIs.  
+- **Manual Steps**: Provisioning required tickets and human intervention, causing delays.  
+- **Limited Visibility**: Teams had fragmented insights into resource usage and application health.
+
+To solve these issues and **further streamline** the developer experience, we introduced **Stratos**—an evolution of GCP CNE, **purpose-built** to enhance automation, unify interfaces, and enforce **opinionated best practices** for modern application development.
+
+### **1.2 Why Stratos?**
+- **Faster Provisioning**: Opinionated “golden paths” reduce setup from weeks to hours (or even minutes).  
+- **Unified Interface**: A single web-based UI combines cluster management, deployment workflows, and monitoring.  
+- **Scalability & Adaptability**: Supports varied workloads (e.g., microservices, data pipelines, web apps) across Cloud Foundry and Kubernetes.
 
 ---
 
 ## **2. Our Evolving Journey**
-1. **Challenges We Faced**  
-   - Large engineering population with varied requirements.  
-   - Historically **manual** steps, limited self-service, and inconsistent processes.  
-   - Lengthy lead times (30+ days) to get started with new environments or services.
 
-2. **Early Focus**  
-   - We introduced Stratos to tackle these bottlenecks, prioritizing **automation** and **self-service** wherever possible.  
-   - Key wins included faster provisioning, standardized best practices, and reduced cognitive load for engineering teams.
+1. **Initial Challenges**  
+   - **Inconsistent Onboarding**: Some teams took 30+ days to gain new environments.  
+   - **Minimal Self-Service**: Heavy reliance on tickets drove up wait times and operational costs.  
+   - **High Cognitive Load**: Engineers navigated different tools and architectures, complicating day-to-day tasks.
 
-3. **Next Steps**  
-   - We continue to **expand** Stratos to address broader engineering needs and incorporate new technologies.  
-   - While you may notice references to newly branded products, many core capabilities still stem from Stratos’s original vision.
+2. **Adopting Stratos**  
+   - Built on **open-source** frameworks like Cloud Foundry and Kubernetes, **Stratos** introduced **automation**, **unified visibility**, and a **user-friendly** UI.  
+   - Early adopters experienced dramatically improved speed, standardized workflows, and reduced manual error rates.
+
+3. **Continuous Improvement**  
+   - Stratos remains under active development, integrating new features and expanding beyond GCP to meet diverse engineering requirements.  
+   - Future roadmap initiatives include better multi-cloud support, more golden paths, and deeper compliance automation.
 
 ---
 
 ## **3. What Is Stratos?**
-At its heart, **Stratos** is an **open-source, web-based user interface** that we’ve customized to:
-- **Simplify** how teams create and manage projects, services, and deployments.  
-- Offer **pre-approved patterns** (often called “golden paths”) for routine tasks (e.g., deploying applications, setting up databases).  
-- Provide **unified visibility** into application performance and resource usage.  
-- **Automate** routine tasks so developers can focus on coding rather than infrastructure heavy-lifting.
 
-### **3.1 Key Components**
-- **Orchestrator (Backend)**
-  - Handles environment provisioning using Infrastructure-as-Code (IaC) principles.  
-  - Integrates with repositories (e.g., GitHub) and pipeline tooling to ensure consistent deployments.
+### **3.1 Core Definition**  
+**Stratos** is an **open-source, web-based user interface** for managing applications on **Cloud Foundry** and **Kubernetes**. It centralizes deployment, visibility, and operational tasks, enabling teams to **develop, ship, and run** cloud-native applications more efficiently.
 
-- **Backstage (Frontend)**
-  - A developer portal that centralizes documentation, service catalogs, and self-service options.  
-  - Makes it easy to discover Stratos’s “golden path” templates and kick off provisioning processes.
+### **3.2 Golden Paths & Supported Tasks**  
+Stratos comes with **opinionated, supported workflows** for specific tasks. These “golden paths” are **pre-approved** and **standardized** to help teams move faster and avoid reinventing the wheel. Notable examples include:
 
-By combining **Orchestrator** and **Backstage**, Stratos delivers a streamlined, end-to-end developer experience.
+1. **Deploying and Managing Access to BigQuery Datasets**  
+2. **Building and Deploying Web Apps, API Proxies, and Containers**  
+3. **Provisioning PostgreSQL Databases**
+
+By offering these **automated** and **simplified** workflows, Stratos ensures consistency in critical areas—security, governance, naming conventions—across teams and environments.
+
+### **3.3 Purpose & Core Benefits**  
+1. **Streamline the Engineering Experience**  
+   - Consolidates multiple tasks (provisioning, deployment, monitoring) into a single interface.  
+2. **Enable Application Modernization**  
+   - Provides standardized, cloud-native approaches that help teams adopt modern DevOps practices without steep learning curves.
 
 ---
 
-## **4. Getting a Stratos Developer Account**
-1. **Submit a Request**  
-   - Go to **IT@LBG** and look for the “Stratos Developer Account” form. Provide the necessary details (e.g., your team, project name).  
-2. **Await Approval**  
-   - Your line manager will receive a notification to review and approve.  
+## **4. Challenges Stratos Addresses**
+
+Stratos directly tackles many organizational and technical pain points:
+
+- **Poor Developer Experience**: By bundling essential tools and automations, developers can focus on writing code rather than orchestrating infrastructure.  
+- **Flat Network**: It introduces segmentation and best-practice networking strategies for more robust and secure setups.  
+- **Multiple Landing Zones & Architectures**: Centralizes management to mitigate architectural sprawl.  
+- **Proliferation of Infrastructure Resources**: Automated provisioning ensures resources follow strict naming and usage conventions, reducing duplication and costs.  
+- **Heavily Ticketed Experience**: Self-service capabilities slash ticket queues and manual approvals, speeding up delivery.  
+- **Complex Identity & Access Management**: Standardizes access control in line with best-practice IAM configurations.  
+- **Lack of Standardization**: Golden paths, templates, and policy enforcement bring consistency to a historically fragmented environment.  
+- **High Cognitive Load**: Engineers no longer need to learn multiple tools for each environment; Stratos abstracts away underlying complexity.
+
+---
+
+## **5. Getting a Stratos Developer Account**
+
+1. **Request Access**  
+   - Go to **IT@LBG** and submit a “Stratos Developer Account” form. Provide your team/project details and any special requirements.  
+
+2. **Manager Approval**  
+   - Your line manager reviews and approves your request, ensuring appropriate access levels and governance.  
+
 3. **Onboarding**  
-   - After approval, you’ll receive instructions on connecting to the right environment, setting up credentials, and exploring the available golden paths.
+   - After approval, you’ll get instructions to:
+     - Set up VPN (if needed)  
+     - Link to Git repositories  
+     - Configure any required pipelines (e.g., harness, Terraform)  
+     - Explore the **Backstage** portal to discover golden paths and kick off your first deployments
 
-> **Tip**: If you run into any issues during onboarding, reach out to your team’s designated Stratos champion or raise a ticket for further assistance.
-
----
-
-## **5. A Brief Note on Platform 3.0**
-Our engineering organization is **evolving** its toolset and processes under what we call **Platform 3.0**—an initiative to enhance our technology environment even further. Stratos is **part** of this broader evolution, retaining its core functionalities while adopting new features to support:
-- **Wider engineering use cases** (beyond initial focus areas).  
-- **More automation** and streamlined workflows.  
-- **Enhanced developer experience** through standardization and continuous improvements.
-
-You’ll likely encounter more references to Platform 3.0 as you grow in your role. For now, just know that **Stratos** is one of the foundational pillars helping us get there.
+> **Pro Tip**: If you get stuck at any point, reach out to your **Stratos champion** or open a support ticket. These resources can guide you through troubleshooting and advanced usage.
 
 ---
 
-## **6. Conclusion**
-By the end of this guide, you should have a basic grasp of:
-- **Why** Stratos was introduced (to reduce bottlenecks and provide self-service capabilities).  
-- **What** Stratos does (centralized interface, golden paths, automation).  
-- **How** to request a developer account and start using it.  
-- **Where** Stratos fits into our ongoing journey toward simpler, faster, and more scalable engineering processes.
+## **6. A Brief Note on Platform 3.0**
+
+Stratos aligns with our broader **Platform 3.0** initiative—an effort to modernize engineering processes and toolsets across the organization. Although you may hear less about the term “Stratos” over time, **its capabilities, golden paths, and automation** will remain core to how we rapidly provision resources, reduce costs, and uplift developer productivity.
 
 ---
 
-### **Additional Resources**
-- **Documentation & Tutorials**: [Link Placeholder]  
-- **Best Practices & Patterns**: [Link Placeholder]  
-- **Troubleshooting & Support**: [Link Placeholder]  
+## **7. Conclusion**
 
-**Remember**: Stratos is constantly evolving. Stay tuned for updates, check team channels regularly, and don’t hesitate to share feedback that could improve our developer experience even more. Good luck, and welcome aboard!
+By now, you should understand:
+
+- **Stratos’s Background**: Evolved from GCP CNE to solve real-world pain points around complexity, manual steps, and fragmented toolchains.  
+- **What Stratos Offers**: Opinionated golden paths for BigQuery, containers, PostgreSQL, plus a single UI for cluster and application management.  
+- **Why It Matters**: Speeds up deployments, enforces best practices, and lowers the cognitive load on engineering teams.  
+- **How to Get Started**: Steps to request a developer account and basic onboarding guidelines.
+
+### **Next Steps**  
+- **Review Tutorials**: [Link Placeholder]  
+- **Explore Golden Paths**: [Link Placeholder]  
+- **Check Announcements**: [Link Placeholder] for updates on new features and best practices.
+
+---
+
+> **Remember**: Stratos is an ongoing journey. Keep an eye on updates and improvements—your feedback and contributions will help us continue refining Stratos for the entire organization. If you have questions or suggestions, don’t hesitate to reach out!
